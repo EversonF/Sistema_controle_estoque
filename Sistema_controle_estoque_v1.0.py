@@ -41,7 +41,7 @@ def main():
             adicionar_produto(novo_produto)
         elif opcao == '3':
             mostrar_produtos()
-            indice = int(input("Digite o número do porduto que deseja alterar: ")) - 1
+            indice = int(input("Digite o número do produto que deseja alterar: ")) - 1
             novo_produto = input("Digite o novo nome do produto: ")
             alterar_produto(indice, novo_produto)
         elif opcao == '4':
