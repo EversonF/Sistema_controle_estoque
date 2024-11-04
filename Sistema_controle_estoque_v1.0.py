@@ -22,3 +22,38 @@ def excluir_produto(indice):
         print(f"{excluido} excluído da lista.")
     else:
         print("Índice inválido.")
+
+def main():
+    while True:
+        print("\nEscolha uma opção: ")
+        print("1. Mostrar produtos ")
+        print("2. Adicionar produto ")
+        print("3. Alterar produto ")
+        print("4. Excluir produto ")
+        print("5. Sair")
+
+        opcao = input("Digite o número da opção: ")
+
+        if opcao == '1':
+            mostrar_produtos()
+        elif opcao == '2':
+            novo_produto = input("Digite o nome do produto a ser adicionado: ")
+            adicionar_produto(novo_produto)
+        elif opcao == '3':
+            mostrar_produtos()
+            indice = int(input("Digite o número do porduto que deseja alterar: ")) - 1
+            novo_produto = input("Digite o novo nome do produto: ")
+            alterar_produto(indice, novo_produto)
+        elif opcao == '4':
+            mostrar_produtos()
+            indice = int(input("Digite o número do produto que deseja excluir: ")) - 1
+            excluir_produto(indice)
+        elif opcao == '5':
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+
+if __name__ == "__main__":
+      main()
