@@ -40,7 +40,9 @@ def excluir_produto(indice):
         print("Índice inválido.")
 ```
 ----------------------
-## Função Principal
+## Função Principal (main)
+### A função *main()* é onde o programa entra em um loop contínuo, permitindo ao usuário escolher ações. O loop só termina quando o usuário escolhe a opção de "Sair" (opção 5).
+### Dentro desse loop, são apresentadas as opções, e o programa aguarda o usuário fazer uma escolha. Dependendo da escolha, o programa chama a função correspondente, ou exibe uma mensagem de erro em caso de entrada inválida.
 
 ```CMD=
 
@@ -83,9 +85,17 @@ def main():
         else:
             print("Opção inválida. Tente novamente.")
 
+````
 
+-------------------
+## Execução
+### O programa começa a execução chamando a função *main()* no final do código:
+
+```CMD=
 if __name__ == "__main__":
     main()
-````
+```
+### Essa linha garante que o programa execute a função principal apenas quando o script for executado diretamente (não quando importado como módulo).
+
 
 
