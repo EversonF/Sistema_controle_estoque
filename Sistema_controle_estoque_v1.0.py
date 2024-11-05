@@ -1,4 +1,5 @@
-lista_produtos = ['máscara faciais' , 'esmaltes' , 'perfumes' , 'batons']
+
+lista_produtos = ['máscara faciais', 'esmaltes', 'perfumes', 'batons']
 
 def mostrar_produtos():
     print("\nLista de produtos: ")
@@ -8,6 +9,7 @@ def mostrar_produtos():
 def adicionar_produto(produto):
     lista_produtos.append(produto)
     print(f"{produto} adicionado à lista.")
+
 
 def alterar_produto(indice, novo_produto):
     if 0 <= indice < len(lista_produtos):
@@ -26,10 +28,10 @@ def excluir_produto(indice):
 def main():
     while True:
         print("\nEscolha uma opção: ")
-        print("1. Mostrar produtos ")
-        print("2. Adicionar produto ")
-        print("3. Alterar produto ")
-        print("4. Excluir produto ")
+        print("1. Mostrar produtos")
+        print("2. Adicionar produto")
+        print("3. Alterar produto")
+        print("4. Excluir produto")
         print("5. Sair")
 
         opcao = input("Digite o número da opção: ")
@@ -40,14 +42,22 @@ def main():
             novo_produto = input("Digite o nome do produto a ser adicionado: ")
             adicionar_produto(novo_produto)
         elif opcao == '3':
-            mostrar_produtos()
-            indice = int(input("Digite o número do produto que deseja alterar: ")) - 1
-            novo_produto = input("Digite o novo nome do produto: ")
-            alterar_produto(indice, novo_produto)
+          while True:
+              mostrar_produtos()
+              try:
+                  indice = int(input("Digite o número do produto que deseja alterar: ")) - 1
+                  novo_produto = input("Digite o novo nome do produto: ")
+                  alterar_produto(indice, novo_produto)
+                  break
+              except ValueError:
+                  print("Por favor, insira um número válido.\n")
         elif opcao == '4':
             mostrar_produtos()
-            indice = int(input("Digite o número do produto que deseja excluir: ")) - 1
-            excluir_produto(indice)
+            try:
+                indice = int(input("Digite o número do produto que deseja excluir: ")) - 1
+                excluir_produto(indice)
+            except ValueError:
+                print("Por favor, insira um número válido.")
         elif opcao == '5':
             print("Saindo...")
             break
@@ -56,4 +66,4 @@ def main():
 
 
 if __name__ == "__main__":
-      main()
+    main()
