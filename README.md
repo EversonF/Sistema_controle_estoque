@@ -1,7 +1,5 @@
 # Sistema de Controle de Estoque
 
-![Git Homer](https://tenor.com/pt-BR/view/cat-computer-typing-fast-gif-5368357)
-
 -----------------------
 
 ## Bem-vindos ao nosso primeiro projeto! 🤩
