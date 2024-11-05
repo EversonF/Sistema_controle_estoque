@@ -7,7 +7,7 @@
 ### Colaboradores:
 ### 💻 Everson Araujo Ferreira
 ### 💻 Marco Tulio da Silva Rocha
-### 💻 Jessica Dasmaceno Barbosa
+### 💻 Jessica Damaceno Barbosa
 ### 💻 Flávia Kathellen Batista Passos
 
 -------------------------
